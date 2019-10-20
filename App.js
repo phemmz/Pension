@@ -1,7 +1,5 @@
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { createBottomTabNavigator, BottomTabBar } from 'react-navigation-tabs';
+import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -10,8 +8,6 @@ import {
   LoginScreen, CreateAccountScreen, AddCardScreen
 } from './src/components/Auth';
 import { HomeScreen } from './src/components/Home';
-
-const TabBarComponent = props => <BottomTabBar {...props} />;
 
 const AppStack = createBottomTabNavigator(
   {
@@ -53,7 +49,6 @@ const AppStack = createBottomTabNavigator(
     },
   },
   {
-    tabBarComponent: props => <TabBarComponent {...props} />,
     tabBarOptions: {
       style: {
         elevation: 0,
